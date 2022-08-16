@@ -241,5 +241,5 @@ error.rate(Classif.table2)
 testpredict <- predict(glm1.obj, newdata=t_testdata1, type = "response") ## Predicting using test data
 pred.test <- ifelse(testpredict > optimal.threshold[,2],1,0)
 testpredict<-data.frame(PassengerID=t_testdata1$PassengerId,Survived=pred.test)
-write.csv(testpredict,file = "Titanic_Prediction_LR.final2.csv",row.names = FALSE)
+write.csv(testpredict,file = "Titanic_Prediction_final.csv",row.names = FALSE)
 
